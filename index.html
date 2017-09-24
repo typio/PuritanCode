@@ -3,21 +3,44 @@
 <head>
     <title>Puritan Code</title>
     <style>
-           html, body {
-               overflow: hidden;
-               background-color: #333;
-            }
-        
-           h1 {
-               font-size: 4em;
-               font-family: "Arial";
-               color: #fff;
-               text-align: center;
-               padding-top: 1.6em;
-           }
+		html, body {
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		h1 {
+			font-size: 4em;
+			font-family: "Arial";
+			color: #fff;
+			text-align: center;
+			padding-top: 1.6em;
+		}
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		.fit {
+			max-width: 100%;
+			max-height: 100%;
+		}
+		.center {
+			display: block;
+			margin: auto;
+		}
     </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" language="JavaScript">
+        function set_body_height() {
+            $('body').height($(window).height());
+        }
+        $(document).ready(function() {
+        $(window).bind('resize', set_body_height);
+        set_body_height();
+        });
+    </script>
 </head>
 <body>
     <h1>The Puritan Code</h1>
+    <img class="center fit" href="http://i.huffpost.com/gen/4548810/images/o-PURITAN-facebook.jpg">
 </body>
 </html>
