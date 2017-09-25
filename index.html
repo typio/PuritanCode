@@ -1,46 +1,233 @@
+<!-- Thomas Huber 9/22/17-->
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Puritan Code</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Ewert" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" href="res\favicon.ico" type="image/x-icon" />
     <style>
-		html, body {
-			overflow: hidden;
-			background-color: #333;
-		}
 
-		h1 {
-			font-size: 4em;
-			font-family: "Arial";
-			color: #fff;
-			text-align: center;
-			padding-top: 1.6em;
-		}
-		* {
-			padding: 0;
-			margin: 0;
-		}
-		.fit {
-			max-width: 100%;
-			max-height: 100%;
-		}
-		.center {
-			display: block;
-			margin: auto;
-		}
+        html::-webkit-scrollbar {
+            display: none;
+        }
+
+    	body, html {
+            margin: 0;
+            height: 100%;
+            background-color: #fff;
+    	}
+
+        .bg {
+            background-image: url("res/bg.jpg");
+
+            height: 100%;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .title {
+            user-select: none;
+            text-align: center;
+            padding-top: 45vh;
+
+        }
+
+        h1 {
+            font-size: 4em;
+            font-family: "Libre Baskerville";
+            color: #000;
+        }
+
+        h3 {
+            user-select: none;
+            font-size: 2vw;
+            font-family: "Ewert";
+        }
+
+        p {
+            font-size: 1em;
+            font-family: "Libre Baskerville";
+            text-align: justify;
+        }
+
+        span.highlight {
+            background-color: #fff;
+            padding-left: .25em;
+            padding-right: .25em;
+        }
+
+        .codes {
+            background-color: #fff;
+            z-index: 99;
+            height: 100%;
+            padding-top: 10%;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .row {
+            text-align: center;
+        }
+
+        .col-md-4 {
+            padding-bottom: 12.5%;
+            overflow-x: hidden;
+        }
+
+        #myBtn {
+            display: block;
+            user-select: none;
+            position: fixed;
+            z-index: 0;
+            bottom: 5%;
+            right: 48%;
+            border: none;
+            outline: none;
+            background-color: white;
+            color: black;
+            font-size: 3em;
+            cursor: pointer;
+            height: 1.6em;
+            width: 1.6em;
+            border-radius: 50%;
+
+        }
+
+        #myBtn:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 990px) {
+            h3 {
+                font-size: 2em;
+            }
+
+            span.highlight2 {
+                padding-left: .25em ;
+                padding-right: .25em;
+                background-color: #000;
+                color: #fff;
+            }
+
+            .codes {
+                height: 100%;
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+
+            .row {
+                text-align: center;
+            }
+
+            .col-md-4 {
+                padding-bottom: 3%;
+                margin-top: -4%;
+                overflow-x: hidden;
+            }
+
+            #myBtn {
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+            }
+
+    }
     </style>
+
 </head>
 <body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    	<script type="text/javascript" language="JavaScript">
-        	function set_body_height() {
-            		$('body').height($(window).height());
-        	}
-        	$(document).ready(function() {
-        	$(window).bind('resize', set_body_height);
-        	set_body_height();
-        	});
-    	</script>
-	<h1>The Puritan Code</h1>
-	<img class="center fit" href="http://i.huffpost.com/gen/4548810/images/o-PURITAN-facebook.jpg">
+
+
+    <button onclick="topFunction()" id="myBtn" title="Scroll Down">⇩</button>
+
+    <div class = "bg">
+        <div class = "title">
+            <h1 >
+                <span class="highlight">The Puritan Codes</span>
+            </h1>
+        </div>
+    </div>
+
+    <div class = "codes" align="center">
+        <div class = "row" >
+            <div class="col-md-4">
+                <h3>
+                    <span class="highlight2">Failure to attend church</span>
+                </h3>
+                <p>
+                    Religion was the most important aspect of Puritan culture.
+                    Because of this, they had strict rules concerning it, one
+                    of those was making church mandatory. Punishment would
+                    start at loss of food and end at whipping or even worse.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>
+                    <span class="highlight2">Blasphemy</span>
+                </h3>
+                <p>
+                    Puritan society was essentially founded on their religion.
+                    As a result, anything disparaging towards their religion
+                    was taken very seriously. Punishment could be being forced
+                    to wear a "B", whipping, or even capital punishment.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>
+                    <span class="highlight2">Failure to pay taxes</span>
+                </h3>
+                <p>
+                    Rules were a big part of Puritan society. So much so that
+                    just sacrificing what you owned was valued. As a result not
+                    paying taxes was treated extremely harshly just like in most
+                    modern societies. Taxes were extremely important to them
+                    however because the funds were used to support the church.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>
+                    <span class="highlight2">Witchcraft</span>
+                </h3>
+                <p>
+                    A common trait of Puritans was superstition. Because of that
+                    and their combined hatred of anything that could be
+                    interpreted as evil, they hater witches. People believed to
+                    be witches were usually executed.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>
+                    <span class="highlight2">Drunkenness</span>
+                </h3>
+                <p>
+                    Puritans valued appearance and collectedness. Public
+                    drunkeness was looked down on because it showed a lack of
+                    formality. The punishment was generally public humiliation in
+                    the form of wearing a letter "D". Some punishments that
+                    occured lasted from a day up to a year.
+                </p>
+            </div>
+            <div class="col-md-4" >
+                <h3>
+                    <span class="highlight2">Adultery</span>
+                </h3>
+                <p>
+                    Adultery is a crime in which a man or a woman has sex
+                    outside of marriage. It is punished by forcing the adulterer
+                    to wear a scarlet letter "A". And in more extreme instances,
+                    whipping or execution.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function topFunction() {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
 </body>
 </html>
